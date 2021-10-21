@@ -56,43 +56,33 @@
     }
   </style>
 
+
 </head>
 
 <body>
   <div id="app"></div>
   <script>
     window.$docsify = {
-      coverpage: ['/de/'],
+      nameLink: false,
       loadSidebar: true,
       subMaxLevel: 2,
       alias: {
         '/de/.*_sidebar.md': "https://raw.githubusercontent.com/PManaras/documentation/master/de/_sidebar.md",
         "/de/(.*)": "https://raw.githubusercontent.com/PManaras/documentation/master/de/$1"
       },
-      name: '<div class="sidebar-logo">' +
-        '  <span class="sidebar-logo-title">XignIn Manager</span>' +
-        "</div>" +
-        '<select id="version-selector" name="version" class="sidebar-version-select">' +
-        '<option value="">de</value>' +
-        '<option value="en">en</value>' +
+      name: '<a id="home-link" class="app-name-link" data-nosearch href="/">XignIn Manager</a>' + 
+        '<select id="version-selector"  name="version" class="sidebar-version-select">' +
+        '<option value="de">Deutsch</value>' +
+        '<option value="en">English</value>' +
         "</select>",
+      fallbackLanguages: ["de"],
       namespaces: [{
         id: "version",
         values: ["de", "en"],
         default: "de",
-        optional: true,
+        optional: false,
         selector: "#version-selector",
       }, ],
-      plugins: [
-        function (hook, vm) {
-          hook.mounted(function () {
-            Docsify.dom.find("#version-selector", function (e) {
-              // I'm using the "hash" router mode
-              window.location.hash = e.target.value;
-            });
-          });
-        }
-      ],
       repo: '',
       autoHeaders: {
         separator: "other", // how numbers should be separated

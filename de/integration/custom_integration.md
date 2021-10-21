@@ -2,19 +2,19 @@
 
 ##	Authentication via QR code
 
-The XignManager provides two separate endpoints to retrieve the qr code and the authentication result. The communication with these endpoints is abstracted into a JavaScript library.
-The endpoint for the QR code is available at:
+Der XignManager bietet zwei separate Endpunkte, um den QR-Code und das Authentifizierungsergebnis abzurufen. Die Kommunikation mit diesen Endpunkten ist in einer JavaScript-Bibliothek abstrahiert.
+Der Endpunkt für den QR-Code ist verfügbar unter:
 
 https://\<xign-system-url\>:\<port\>/api/rp/qrcode
 
-After the QR Code is retrieved and displayed the user performs the authentication, after which the authentication result is retrieved from:
+Nachdem der QR-Code abgerufen und angezeigt wurde, führt der Benutzer die Authentifizierung durch, woraufhin das Authentifizierungsergebnis abgerufen wird:
 
 https://\<xign-system-url\>:\<port\>/api/rp/auth-response
 
 
 ### Code Example for Browser
 
-To integrate XignIn, there are two steps the integrator has to follow. First the following code snippet has to be integrated into the page, which is responsible for showing the QR code to the user and to control the user agent.
+Um XignIn zu integrieren, muss der Integrator zwei Schritte befolgen. Zunächst muss das folgende Code-Snippet in die Seite integriert werden, die für die Anzeige des QR-Codes und die Steuerung des User-Agents verantwortlich ist.
 
 ```html
 <script type="text/javascript" src="###manager.url###/js/xignqr-jslogin.umd.min.js"></script>
@@ -44,20 +44,19 @@ To integrate XignIn, there are two steps the integrator has to follow. First the
 
 ## Authentication via push notification
 
-The service provider is able to trigger an authentication process via push-notifications, that are sent to the user’s smartphone.
-The push-notification is sent, when the service provider sends an appropriate message to the push authentication endpoint available at:
+Der Dienstanbieter kann einen Authentifizierungsprozess über Push-Benachrichtigungen auslösen, die an das Smartphone des Nutzers gesendet werden.
+Die Push-Benachrichtigung wird gesendet, wenn der Dienstanbieter eine entsprechende Nachricht an den Push-Authentifizierungsendpunkt sendet, der unter folgender Adresse verfügbar ist:
 
 https://\<xign-system-url\>:\<port\>/api/rp/push
 
-The result of the push notification is retrieved from the push result endpoint at:
-
+Das Ergebnis der Push-Benachrichtigung wird vom Push-Ergebnis-Endpunkt unter abgerufen:
 https://\<xign-system-url\>:\<port\>/api/rp/push-result
 
-The Authentication via push notifications resembles that of the authentication via QR code. The main difference between the triggers, is the way the information about the authentication process is conveyed to the smartphone.
+Die Authentifizierung über Push-Benachrichtigungen ähnelt der Authentifizierung über QR-Code. Der Hauptunterschied zwischen den Auslösern ist die Art und Weise, wie die Informationen über den Authentifizierungsvorgang an das Smartphone übermittelt werden.
 
 ## Code Example at Redirect URI
 
-After authentication is done (no matter if push or qr code), the user-agent is redirected to the registered redirect URI, along with an authorization code. At the redirect URI the integrator is able to make use of our XignIn server-side library to retrieve, decrypt and verify the information about the user. The following snippet shows the code, that is necessary: 
+Nach erfolgter Authentifizierung (egal ob Push oder QR-Code) wird der User-Agent zusammen mit einem Autorisierungscode an die registrierte Redirect-URI weitergeleitet. An der Redirect-URI kann der Integrator unsere serverseitige XignIn-Bibliothek nutzen, um die Informationen über den Benutzer abzurufen, zu entschlüsseln und zu verifizieren. Das folgende Snippet zeigt den dafür notwendigen Code: 
 
 ```js
 String code = request.getParameter("code");
@@ -68,17 +67,16 @@ JWTClaimsSet claims = tc.requestIdToken(code);
 
 ## Token-Endpoint
 
-Available at: https://\<xign-system-url\>:\<port\>/api/rp/token
+Verfügbar an: https://\<xign-system-url\>:\<port\>/api/rp/token
 
-After the authentication is done, the user’s user-agent is redirected to the registered redirect URI, along with an authorization code. At the redirect URI the service provider uses the authorization code to retrieve information about the authenticated user. The token endpoint is in fact a OpenID Connect Token Endpoint, that supports encryption compliant to the OpenID Connect Specification:
+Nach erfolgter Authentifizierung wird der User-Agent des Benutzers zusammen mit einem Autorisierungscode an die registrierte Redirect-URI weitergeleitet. Am Redirect-URI verwendet der Dienstanbieter den Autorisierungscode, um Informationen über den authentifizierten Benutzer abzurufen. Der Token-Endpunkt ist in der Tat ein OpenID Connect Token-Endpunkt, der die Verschlüsselung gemäß der OpenID Connect-Spezifikation unterstützt:
 
+Verschlüsselung:
+* RSA OAEP (Verschlüsselung eines Inhaltsverschlüsselungsschlüssels mit dem öffentlichen RSA-Schlüssel des Dienstanbieters), der verwendete Algorithmus ist A256CBC-HS512 (Advanced Encryption Standard (AES) im Cipher Block Chaining (CBC)-Modus mit PKCS #5 Padding (NIST.800-38A) mit einer Integritätsberechnung unter Verwendung von HMAC SHA-512, unter Verwendung eines 512-Bit CMK und eines 256-Bit CEK (siehe RFC7516)
+* ECDH-ES (Key Agreement based on Elliptic Curve Keys; der daraus resultierende Schlüssel wird zur Verschlüsselung des CEK verwendet), der verwendete Algorithmus ist ebenfalls A256CBC-HS512 (Advanced Encryption Standard (AES) im Cipher Block Chaining (CBC)-Modus mit PKCS #5 Padding (NIST.800-38A) mit einer Integritätsberechnung unter Verwendung von HMAC SHA-512, mit einem 512-Bit-CMK und einem 256-Bit-CEK (siehe RFC7518)
 
-Encryption:
-* RSA OAEP (Encryption of a Content Encryption Key with the RSA Public Key of the service provider), the algorithm used is A256CBC-HS512 (Advanced Encryption Standard (AES) in Cipher Block Chaining (CBC) mode with PKCS #5 padding (NIST.800-38A) with an integrity calculation using HMAC SHA-512, using a 512 bit CMK and a 256 bit CEK (see RFC7516)
-*	ECDH-ES (Key Agreement based on Elliptic Curve Keys; the resulting key is used to encrypt the CEK) the algorithm used is also A256CBC-HS512 (Advanced Encryption Standard (AES) in Cipher Block Chaining (CBC) mode with PKCS #5 padding (NIST.800-38A) with an integrity calculation using HMAC SHA-512, using a 512 bit CMK and a 256 bit CEK (see RFC7518)
+Signaturen:
+* RS256 RSASSA-PKCS-v1_5 mit SHA-256-Hash-Algorithmus (siehe RFC7515)
+* ES256 ECDSA mit Kurve P-256 (secpr-256) und SHA-256-Hash-Algorithmus (siehe RFC7515)
 
-Signatures:
-* RS256 RSASSA-PKCS-v1_5 with SHA-256 Hash Algorithm (see RFC7515)
-* ES256 ECDSA with curve P-256 (secpr-256) and SHA-256 Hash algorithm (see RFC7515)
-
-The token requests resembles the token requests defined in section 3.1.3.1.  Token Request of the OpenID Connect specification. In response to the token request, the server issues an OpenID Connect ID Token Response containing the ID Token and ultimately the user information.
+Die Token-Anforderungen ähneln den in Abschnitt 3.1.3.1 definierten Token-Anforderungen.  Token Request der OpenID Connect-Spezifikation. Als Antwort auf die Token-Anforderung gibt der Server eine OpenID Connect ID-Token-Antwort aus, die das ID-Token und schließlich die Benutzerinformationen enthält.
