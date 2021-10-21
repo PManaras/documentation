@@ -1,2 +1,0 @@
-FROM quintoandar/docsify
-ADD . .
