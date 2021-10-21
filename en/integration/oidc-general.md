@@ -39,13 +39,13 @@ https://openid.net/specs/openid-connect-core-1_0.html#HybridFlowAuth
 ## Signatures
 **Signaturealgorithms**  
 * RS256 (RSASSA-PKCS1-v1_5 mit SHA256)
-    * 4096 Bit Schlüssellänge
+    * 4096 Bit keylength
 * ES256 (ECDSA mit P-256 und SHA-256)
     * secpr256r1 aka prime256v1
 
 ## Encryption
-**Encryptionsalgorithms and Modes**  
+**Encryptionalgorithms and Modes**  
 * RSA-OAEP mit A256CBC_HS512
-    * 4096 Bit Schlüssellänge
+    * 4096 Bit keylength
 * ECDH-ES mit A256CBC_HS512
     * secpr256r1 aka prime256v1
