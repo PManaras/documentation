@@ -65,6 +65,10 @@
       coverpage: true,
       loadSidebar: true,
       subMaxLevel: 2,
+      alias: {
+        '/de/.*_sidebar.md': "https://raw.githubusercontent.com/PManaras/documentation/master/de/_sidebar.md",
+        "/de/(.*)": "https://raw.githubusercontent.com/PManaras/documentation/master/de/$1"
+      },
       name: '<div class="sidebar-logo">' +
         '  <span class="sidebar-logo-title">XignIn Manager</span>' +
         "</div>" +
