@@ -1,4 +1,4 @@
-* [Home](home.md)
+* [Home](README.md)
 * [Organisationen und Dienste](orga-services.md)
 * [OpenID Connect Integration](integration/oidc-general.md)
 * [Custom Integration](integration/custom_integration.md)
