@@ -12,17 +12,17 @@ Für die Erstellung eines Dienstes im XignIn-Manager muss zuvor eine eigene Orga
 
 2. Daraufhin öffnet sich ein Formular, bei der Organisationsdaten angegeben werden können. Die notwendigen Felder sind mit dementsprechend (mit einem \*) markiert.
 <p align="center">
-<img src="_media/organization_add.png" style="width: 70%; margin:auto">
+<img src="https://raw.githubusercontent.com/PManaras/documentation/master/_media/organization_add.png" style="width: 70%; margin:auto">
 </p>
 
 3. Nachdem die Organisation erstellt worden ist, kann sie über den Button bearbeiten bearbeitet werden.
 <p align="center">
- <img src="_media/organization_overview.png" style="width: 70%; margin:auto">
+ <img src="https://raw.githubusercontent.com/PManaras/documentation/master/_media/organization_overview.png" style="width: 70%; margin:auto">
  </p>
 
 4. Die Übersicht der Organisation zeigt verschiedene Einstellungsmöglichkeiten. Hier kann unter Dienste ein neuer Dienst hinzugefügt werden.
 <p align="center">
-   <img src="_media/service_overview.png" style="width: 70%; margin:auto">
+   <img src="https://raw.githubusercontent.com/PManaras/documentation/master/_media/service_overview.png" style="width: 70%; margin:auto">
 </p>
 
 ## Dienste hinzufügen & konfigurieren
@@ -34,7 +34,7 @@ Nach dem Bestätigen des „Dienst hinzufügen“-Buttons öffnet sich ein Dialo
 
 1. Der Dialog zeigt ein Formular, dass mit den entsprechenden Angaben gefüllt werden muss, um den Dienst initial zu konfigurieren
 <p align="center">
- <img src="_media/service_add.png" style="width: 70%; margin:auto">
+ <img src="https://raw.githubusercontent.com/PManaras/documentation/master/_media/service_add.png" style="width: 70%; margin:auto">
  </p>
 
 - **Name**:  
@@ -49,12 +49,12 @@ Nach dem Bestätigen des „Dienst hinzufügen“-Buttons öffnet sich ein Dialo
 
 2. Wenn der Dienst erfolgreich erstellt ist, dann wird er wie folgt angezeigt. Über den bearbeiten (Stift) Button kann der Dienst konfiguriert werden.
 <p align="center">
- <img src="_media/services.png" style="width: 70%; margin:auto">
+ <img src="https://raw.githubusercontent.com/PManaras/documentation/master/_media/services.png" style="width: 70%; margin:auto">
  </p>
 
 3. In der Bearbeitungsansicht kann der Dienst konfiguriert werden:
 <p align="center">
- <img src="_media/service_info.png" style="width: 70%; margin:auto">
+ <img src="https://raw.githubusercontent.com/PManaras/documentation/master/_media/service_info.png" style="width: 70%; margin:auto">
  </p>
 
 - **Informationen**:  
@@ -64,7 +64,7 @@ Nach dem Bestätigen des „Dienst hinzufügen“-Buttons öffnet sich ein Dialo
 
 4. Über den Reiter Nutzer:innen können die Nutzer des jeweiligen Dienstes konfiguriert werden. Wenn der Punkt Einladung erforderlich aktiviert ist, müssen hier die jeweiligen Nutzer des Dienstes eingeladen werden, damit sie sich bei dem Dienst anmelden können.
 <p align="center">
-   <img src="_media/service_invites.png" style="width: 70%; margin:auto">
+   <img src="https://raw.githubusercontent.com/PManaras/documentation/master/_media/service_invites.png" style="width: 70%; margin:auto">
    </p>
 
 
@@ -89,7 +89,7 @@ Nach dem Bestätigen des „Dienst hinzufügen“-Buttons öffnet sich ein Dialo
 
 5. Weitere Konfiguration des Dienstes:
 <p align="center">
- <img src="_media/service_settings.png" style="width: 70%; margin:auto">
+ <img src="https://raw.githubusercontent.com/PManaras/documentation/master/_media/service_settings.png" style="width: 70%; margin:auto">
  </p>
 
 - **Allgemein**:  

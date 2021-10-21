@@ -7,14 +7,14 @@ To Integrate XignIn Identity and XignIn, an OpenID Connect Provider (IDP) needs 
 2. From the drop down on the upper left side, select the realm in which the IDP should be created
     <br>
     <div style="text-align:center">
-    <img src="../_media/xidentity_step_2.png" alt="drawing" width="200"/>
+    <img src="https://raw.githubusercontent.com/PManaras/documentation/master/_media/xidentity_step_2.png" alt="drawing" width="200"/>
     </div>
    
 3. Select the option Identity Providers
 4. From the following screen select **OpenID Connect v1.0** in the drop-down menu
     <br>
     <div style="text-align:center">
-    <img src="../_media/xidentity_step_4.png" alt="drawing" />
+    <img src="https://raw.githubusercontent.com/PManaras/documentation/master/_media/xidentity_step_4.png" alt="drawing" />
     </div>
 
 5. Configure the Identity Provider, these are the mandatory configuration options<br>
@@ -36,14 +36,14 @@ To configure XignIn as the default IdP follow these steps:
     <br>
     <br>
     <div style="text-align:center">
-    <img src="../_media/xidentity_default_idp_1.png" alt="drawing" />
+    <img src="https://raw.githubusercontent.com/PManaras/documentation/master/_media/xidentity_default_idp_1.png" alt="drawing" />
     </div>
 3.	Under **Default Identity Provider** enter the name of the created OpenID Connect Identity Provider from the previous steps and an Alias for this configuration and save the settings
 4.	If the settings are successfully saved the Identity Provider Redirector will be suffixed with the Alias given to the configuration:
     <br>
     <br>
     <div style="text-align:center">
-    <img src="../_media/xidentity_default_idp_2.png" alt="drawing" />
+    <img src="https://raw.githubusercontent.com/PManaras/documentation/master/_media/xidentity_default_idp_2.png" alt="drawing" />
     </div>
 
 
@@ -56,14 +56,14 @@ The Identity Provider can be configured to automatically create a xidentity user
     <br>
     <br>
     <div style="text-align:center">
-    <img src="../_media/xidentity_create_user_on_login_1.png" alt="drawing" />
+    <img src="https://raw.githubusercontent.com/PManaras/documentation/master/_media/xidentity_create_user_on_login_1.png" alt="drawing" />
     </div>
 
 3.	Set the newly created flow in the **First Login Flow** section of the IdP settings
     <br>
     <br>
     <div style="text-align:center">
-    <img src="../_media/xidentity_create_user_on_login_2.png" alt="drawing" />
+    <img src="https://raw.githubusercontent.com/PManaras/documentation/master/_media/xidentity_create_user_on_login_2.png" alt="drawing" />
     </div>
 
 
@@ -95,7 +95,7 @@ XignSys provides a XignIn Identity Authentication SPI to integrate XignIn with X
     <br>
     <br>
     <div style="text-align:center">
-    <img src="../_media/xidentity_plugin_1.png" alt="drawing" />
+    <img src="https://raw.githubusercontent.com/PManaras/documentation/master/_media/xidentity_plugin_1.png" alt="drawing" />
     </div>
 4.	Set XignIn as REQUIRED
 5.	Configure the XignIn Provider by click Actions > Config
@@ -103,7 +103,7 @@ XignSys provides a XignIn Identity Authentication SPI to integrate XignIn with X
     <br>
     <br>
     <div style="text-align:center">
-    <img src="../_media/xidentity_plugin_2.png" alt="drawing" />
+    <img src="https://raw.githubusercontent.com/PManaras/documentation/master/_media/xidentity_plugin_2.png" alt="drawing" />
     </div>
 
     * Alias – An Alias for the configuration
