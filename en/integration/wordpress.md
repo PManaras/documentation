@@ -12,7 +12,7 @@ Make sure that you have created an Account and an Organization at the [XignIn-Ma
 ## Plugin Installation and Configuration
 
 1. If the Plugin has already been released to the WordPress Plugin Store you can simply install it from there. Otherwise you will probably have received a zipped File containing the Plugin. Navigate to the Admin Dashboard of your Wordpress Site and go to __Plugins -> Install -> Upload Plugin__ and upload the zipped File you have received.
-1. After the Installation is complete you can Activate the Plugin. You should now see a new Menu Item in the Sidebar on the left called __XignIn Settings__. If you navigate to this Page you will be presented with a File Upload Form where you will need to upload the Config JSON File you can download from your Service Page at the XignIn-Manager.
+1. After the Installation is complete you can Activate the Plugin. You should now see a new Menu Item in the Sidebar on the left called __XignIn Settings__. If you navigate to this Page you will be presented with a File Upload Form where you will need to upload the Config JSON File you can download from your Service Page at the XignIn-Manager. (For instructions how to create a organization and service see [Organization and Services](../orga-services))
 1. Once you have Uploaded your Config File the Settings Page should refresh and show you all Plugin Settings you are able to configure.
 
 ### Plugin Settings
