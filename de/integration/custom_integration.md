@@ -39,7 +39,7 @@ Um XignIn zu integrieren, muss der Integrator zwei Schritte befolgen. Zunächst 
 
 ### Authentication Flow
 
-<img src="../images/high_level_flow.png" alt="drawing" width="800"/>
+<img src="https://raw.githubusercontent.com/PManaras/documentation/master/_media/high_level_flow.png" alt="drawing" width="800"/>
 
 
 ## Authentication via push notification
