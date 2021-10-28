@@ -11,7 +11,6 @@ After the QR Code is retrieved and displayed the user performs the authenticatio
 
 https://\<xign-system-url\>:\<port\>/api/rp/auth-response
 
-sdkarfghfasdhjkgfhjksgadfhjkgsdghjkasdfhjkeasdfghjksadfghjashjkdfghjsdfghjksaf
 ### Code Example for Browser
 
 To integrate XignIn, there are two steps the integrator has to follow. First the following code snippet has to be integrated into the page, which is responsible for showing the QR code to the user and to control the user agent.
